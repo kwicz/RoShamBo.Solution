@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Rock, Paper, Scissors</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <h1>@Model.P2Name's Turn!</h1>
+    <h3>@Model.P1Name - Please Turn Around!
+    <form action="/winner" method="post">
+     <label for="playerTwoTurn">Rock, Paper, or Scissors</label>
+     <input id="playerTwoTurn" name="playerTwoTurn" type="text">
+     <button type="submit">Go!</button>
+    </form>
+  </body>
+</html>
