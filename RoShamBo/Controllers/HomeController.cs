@@ -6,8 +6,9 @@ namespace RoShamBo.Controllers
 {
   public class HomeController : Controller
   {
-    PlayerNames newPlayers = new PlayerNames();
-    Round newRound;
+    // PlayerNames newPlayers = new PlayerNames();
+    
+    // Round newRound;
     
     [Route("/")]
     public ActionResult Home() { return View(); }
@@ -15,27 +16,28 @@ namespace RoShamBo.Controllers
     [Route("/roundPlayerOne")]
     public ActionResult roundPlayerOne(string playerOneName, string playerTwoName) 
     { 
-      newPlayers.P1Name = playerOneName;
-      newPlayers.P2Name = playerTwoName;
-      return View(newPlayers); 
+      Round.P1Name = playerOneName;
+      Round.P2Name = playerTwoName;
+      return View(); 
     }
 
     [Route("/roundPlayerTwo")]
     public ActionResult roundPlayerTwo(string playerOneTurn) 
     { 
       
-      newRound = new Round(playerOneTurn);
-      return View(newPlayers); 
+      // newRound = new Round(playerOneTurn);
+      Round.P1Hand = playerOneTurn;
+      return View(); 
     
     }
 
     [Route("/Winner")]
     public ActionResult Winner(string playerTwoTurn)
     {
-      string playerOneTurn = newRound.P1Hand;
-      newRound = new Round(playerOneTurn, playerTwoTurn);
-      string winner = newRound.WinnerCheck();
-      return View(winner);
+      // string playerOneTurn = newRound.P1Hand;
+      // newRound = new Round("rock", playerTwoTurn);
+      string winner = Round.WinnerCheck();
+      return View();
     }
 
   }

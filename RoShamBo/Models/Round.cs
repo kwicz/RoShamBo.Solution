@@ -2,23 +2,26 @@ namespace RoShamBo.Models
 {
   public class Round
   {
-    public string P1Hand { get; set; }
-    public string P2Hand { get; set; }
-    public string Winner { get; set; }
+    public static string P1Hand { get; set; }
+    public static string P2Hand { get; set; }
+    public static string Winner { get; set; }
+    public static string P1Name { get; set; }
+    public static string P2Name { get; set; }
 
 
-    public Round(string player1)
-    {
-      P1Hand = player1;
-    }
-    public Round(string player1, string player2)
-      : this(player1)
-    {
-      P2Hand = player2;
-    }
+
+    // public Round(string player1)
+    // {
+    //   P1Hand = player1;
+    // }
+    // public Round(string player1, string player2)
+    //   : this(player1)
+    // {
+    //   P2Hand = player2;
+    // }
 
 
-    public string WinnerCheck()
+    public static string WinnerCheck()
     {
       if (P1Hand == P2Hand)
       {

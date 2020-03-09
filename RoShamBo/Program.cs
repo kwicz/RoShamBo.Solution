@@ -18,21 +18,21 @@ namespace RoShamBo
 
       host.Run();
 
-      Console.WriteLine("It's the World's Best Game!\n Rock, Paper, Scissors!");
-      NewGame();
+      // Console.WriteLine("It's the World's Best Game!\n Rock, Paper, Scissors!");
+      // NewGame();
 
     }
 
-    public static void NewGame()
-    {	
-      Console.WriteLine("Player 1, please enter your move. [rock] [paper] [scissors]");
-      string player1Hand = Console.ReadLine().ToLower();
-      Console.WriteLine("Player 2, please enter your move! [rock] [paper] [scissors]");
-      string player2Hand = Console.ReadLine().ToLower();
-      Round round = new Round(player1Hand, player2Hand);
-      string winner = round.WinnerCheck();
-      Console.WriteLine(winner);
-    }
+    // public static void NewGame()
+    // {	
+    //   Console.WriteLine("Player 1, please enter your move. [rock] [paper] [scissors]");
+    //   string player1Hand = Console.ReadLine().ToLower();
+    //   Console.WriteLine("Player 2, please enter your move! [rock] [paper] [scissors]");
+    //   string player2Hand = Console.ReadLine().ToLower();
+    //   Round round = new Round(player1Hand, player2Hand);
+    //   string winner = round.WinnerCheck();
+    //   Console.WriteLine(winner);
+    // }
 
   }
 }
