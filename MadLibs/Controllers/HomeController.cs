@@ -9,10 +9,10 @@ namespace MadLibs.Controllers
     [Route("/")]
     public ActionResult Select() { return View(); }
 
-    [Route("form1")]
-    public ActionResult form1() { return View(); }
+    [Route("/Form1")]
+    public ActionResult Form1() { return View(); }
 
-    [Route("/result1")]
+    [Route("/Result1")]
     public ActionResult Result1(string noun1, string noun2, string adjective1, string adjective2, string verb1,string verb2, string adverb)
     {
         Libs newLibs = new Libs();
@@ -26,7 +26,7 @@ namespace MadLibs.Controllers
         return View(newLibs);
     }
 
-    [Route("DelphiaForm")]
+    [Route("/DelphiaForm")]
     public ActionResult DelphiaForm() { return View(); }
 
 
@@ -49,9 +49,24 @@ namespace MadLibs.Controllers
         newLibs.IngVerb = ingverb;
         return View(newLibs);
     }
-    [Route("/BreakUpForm")]
-
 
     [Route("/BreakUpForm")]
+    public ActionResult BreakUpForm() { return View(); }
+
+    [Route("/BreakUp")]
+    public ActionResult BreakUp(string saying, string insult, string color, string city, string pastVerb, string pastVerb2, string profanity, string name, string profession)
+    {
+      Libs newLibs = new Libs();
+      newLibs.Saying = saying;
+      newLibs.Insult = insult;
+      newLibs.Color = color;
+      newLibs.City = city;
+      newLibs.PastVerb = pastVerb;
+      newLibs.PastVerb2 = pastVerb2;
+      newLibs.Profanity = profanity;
+      newLibs.Name = name;
+      newLibs.Profession = profession;
+      return View(newLibs);
+    }
   }
 }
